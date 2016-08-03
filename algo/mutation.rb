@@ -3,8 +3,21 @@
 # the first string, and false otherwise.
 
 def mutation?(base_word, mutation)
-
-end
+   base_word_array = []
+   mutation_array = []
+   base_word_array << base_word
+   mutation_array << mutation
+   base_word_array = base_word_array = base_word.split(//)
+   mutation_array = mutation_array = mutation.split(//)
+   combined = base_word_array & mutation_array
+   combined = combined.sort
+   mutation_array = mutation_array.sort
+   if combined == mutation_array
+     true
+   else
+     false
+   end
+ end
 
 # Driver code - don't touch anything below this line.
 puts "TESTING mutation?..."
